@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.myh1 {
+font-family: copperplate, serif;
+font-weight: 700;
+font-size: 97px;
+font-style: normal;
+}
+
+.myh2 {
+font-family: "copperplate", serif;
+font-weight: 400;
+font-style: normal;
+font-size:40px;
+}
+
+.myh3 {
+font-family: "amiko", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.myh4 {
+font-family: "amiko", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:20px;
+}
+
+.myp{
+font-family: "amiko", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/*defind the animation*/
+
+@keyframes fadeIn {
+	
+	from {
+		opacity:0;
+	}
+	
+	to {
+		opacity:1;
+	}
+}
+
+/*0 means off, 1 means on*/
+
+/*apply the animation*/
+
+.fade-in-box {
+	
+	opacity: 0; 
+	animation: fadeIn 2s ease forwards;
+	
+}
+
+
