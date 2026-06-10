@@ -2,7 +2,9 @@
 /* CSS Document */
 
 
-
+body {
+    background-color: #8a6e7f;
+}
 .container{
 	width:100%;
 	background-color: #EDE6E8;
