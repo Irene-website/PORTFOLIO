@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+.container{
+	width:100%;
+	background-color: #EDE6E8;
+}
+
+.navBar{
+	max-width:100%;
+	background-color:#8a6e7f;
+	text-align: center;
+}
+
+.navBar ul {
+	list-style-type: none;
+	padding: 15px;
+	justify-content: center;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    display: flex;
+	font-size:14px;
+}
+.navBar ul li a {
+	display: block;
+	color: #F9F6F2;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.navBar ul li a:hover {
+    color: #5D4A55;
+}
+
+.slide-title {
+    text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:23px;
+    color: #AE6A7D;
+}
+
+.website ul{
+	list-style-type: none;
+}
+
+.website ul li a{
+	color: #23191C;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    line-height: 28px;
+   font-size: 18px;
+    text-decoration: none;
+    margin-left: -34px;
+	letter-spacing:1px;
+}
+
+.website ul li a:hover{
+    font-weight: bolder;
+}
+
+	
+.slideshow-container ul{
+    text-align:center;
+	list-style-type:none;
+	line-height:10px;
+	margin-top:30px;
+
+}
+
+.slideshow-container ul li a{
+	text-decoration:none;
+	color: #23191C;
+	margin-left:-34px;
+	font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+
+}
+
+.slideshow-container ul li a:hover{
+        color: #AC86AC;
+}
+
+* {box-sizing: border-box}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
+  display: none;
+  width: 100%;
+}
+
+/* Crucial Fix: Forces the active slide wrapper to become a centering flex container */
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {
+    width: 100%;
+    height: 100%;
+    display: none; /* Controlled by your JavaScript */
+  /* Flexbox alignment rules */
+    align-items: center;     /* Centers the image perfectly up & down */
+    justify-content: center;  /* Centers the image perfectly left & right */
+
+}
+
+/* Main Container Grid - Centers the slideshow rows on the page */
+.slideshow-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the slideshows horizontally */
+  gap: 50px; /* Generous gap between side-by-side slideshows */
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Slideshow Container */
+.slideshow-container {
+  position: relative;
+  /* Width must be exactly 400px plus the 60px padding on each side for buttons */
+  width: 520px; 
+  box-sizing: border-box;
+  padding: 0 60px; /* Space reserved exclusively for your next/prev buttons */
+    
+}
+
+/* Fixes a layout bug where elements below rows try to float upward */
+.slideshow-grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The Frame: Forces every single slideshow box to be the exact same height */
+.image-window {
+  width: 400px;
+  height: 550px;
+  background-color: #EDE6E8; /* Matches your background exactly for a seamless look */
+  overflow: hidden;
+  position:relative;
+    
+}
+
+/* Auto-Scaling Artwork */
+.image-window img {
+  max-width: 100%;    /* If image is wide (700x500), shrinks width to 400px max */
+  max-height: 100%;   /* If image is tall (400x700), shrinks height to 550px max */
+  width: auto;        /* Automatically adjusts width to preserve aspect ratio */
+  height: auto;       /* Automatically adjusts height to preserve aspect ratio */
+  display:block;
+    
+}
+
+/* Locked Navigation Buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 57%;
+  transform: translateY(-50%); /* Centers buttons perfectly on the middle horizon line */
+  width: 44px;
+  height: 44px;
+  color: #8a6e7f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 10;
+}
+
+/* Pins buttons directly outside the 400x550 image frame boundaries */
+.prev { left: 8px; }
+.next { right: 8px; }
+
+.prev:hover, .next:hover {
+  background-color: #8a6e7f;
+  color: #EDE6E8;
+}
+
+.myfooter {
+    background-color: #8a6e7f;
+    height: 85px;
+    text-align: center;
+    line-height: 85px;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    color: #F9F6F2;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.disclaimer {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-size: 17px;
+    padding-bottom: 29px;
+    color: #69505C;
+}
+
+
+/* Responsive Mobile Screen Rules */
+@media screen and (max-width: 1100px) {
+  .slideshow-grid {
+    align-items: center;
+  }
+}
