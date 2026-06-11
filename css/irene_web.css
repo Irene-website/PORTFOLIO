@@ -1,11 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
 body {
     background-color: #8a6e7f;
 }
+
 .container{
+    align:center;
 	width:100%;
 	background-color: #EDE6E8;
 }
@@ -33,6 +34,7 @@ body {
 
 .navBar ul li a:hover {
     color: #5D4A55;
+font-style: bold;
 }
 
 .slide-title {
@@ -114,6 +116,7 @@ body {
   position: relative;
   /* Width must be exactly 400px plus the 60px padding on each side for buttons */
   width: 520px; 
+    max-width: 100%;
   box-sizing: border-box;
   padding: 0 60px; /* Space reserved exclusively for your next/prev buttons */
     
@@ -129,10 +132,12 @@ body {
 /* The Frame: Forces every single slideshow box to be the exact same height */
 .image-window {
   width: 400px;
+    max-width: 100%;
   height: 550px;
   background-color: #EDE6E8; /* Matches your background exactly for a seamless look */
   overflow: hidden;
   position:relative;
+    margin: 0 auto;
     
 }
 
@@ -196,9 +201,48 @@ body {
 }
 
 
+
+
 /* Responsive Mobile Screen Rules */
-@media screen and (max-width: 1100px) {
+
+@media screen and (max-width: 600px) {
   .slideshow-grid {
-    align-items: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0px; /*removed side padding from main grid*/
   }
+    
+    
+.slideshow-container{
+    width:100% !important; /*forces lyaout to take up mobile screen width*/
+    padding: 0 45px;
+    margin-bottom:40px;
+    
+    
+}
+
+.image-window{
+    width: calc(100% - 10px) !important;
+    height: 420px;
+    margin: 0 auto;
+}
+
+.prev .next {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+    z-index: 9999 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 4px !important;
+}
+
+.next {
+    right: 4px !important;
+}
+
 }
